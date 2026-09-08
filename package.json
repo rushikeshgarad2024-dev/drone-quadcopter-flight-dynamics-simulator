@@ -1,0 +1,10 @@
+﻿{
+  "name": "drone-quadcopter-flight-dynamics-simulator",
+  "version": "1.0.0",
+  "description": "6-DOF Quadcopter Drone Flight Dynamics & PID Attitude Stabilization Simulator for Aerospace & Mechatronics",
+  "main": "index.html",
+  "scripts": { "start": "npx serve ." },
+  "keywords": ["quadcopter", "drone-simulator", "flight-dynamics", "pid-control", "aerospace-engineering", "6dof", "mechatronics"],
+  "author": "Rushikesh Garad",
+  "license": "MIT"
+}

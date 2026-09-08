@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><title>Drone & Quadcopter 6-DOF Flight Dynamics Simulator | Aerospace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <div class="header-content">
+        <h1>🛸 Drone & Quadcopter 6-DOF Flight Dynamics Suite</h1>
+        <p>Quadcopter Thrust Moments ($F_i = k_t \omega_i^2$), PID Attitude Stabilization & Wind Rejection</p>
+      </div>
+      <div class="author-badge">Aerospace & Flight Control • Rushikesh Garad</div>
+    </header>
+    <div class="main-layout">
+      <div class="control-panel">
+        <h3>Flight Controls</h3>
+        <div class="form-group">
+          <label>Throttle Thrust (%): <span id="thrustVal">65%</span></label>
+          <input type="range" id="thrustRange" min="20" max="100" value="65" />
+        </div>
+        <div class="form-group">
+          <label>Roll Angle Command ($\phi$): <span id="rollVal">0°</span></label>
+          <input type="range" id="rollRange" min="-30" max="30" value="0" />
+        </div>
+        <div class="results-card">
+          <h4>📊 Flight Telemetry</h4>
+          <div class="stat-row"><span>Altitude ($Z$):</span> <strong id="altVal">18.4 m</strong></div>
+          <div class="stat-row"><span>Total Thrust ($F_{tot}$):</span> <strong id="fTotVal">14.7 N</strong></div>
+          <div class="stat-row"><span>PID Loop State:</span> <span class="badge-safe">LOCKED HOVER</span></div>
+        </div>
+      </div>
+      <div class="viewport-panel">
+        <div class="canvas-header"><span>6-DOF Flight Canvas: Animated Quadcopter Body & Spinning Rotors</span></div>
+        <canvas id="droneCanvas" width="800" height="460"></canvas>
+      </div>
+    </div>
+  </div>
+  <script src="drone.js"></script>
+</body>
+</html>
